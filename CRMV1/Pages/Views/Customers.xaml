@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:resources="clr-namespace:CRMV1.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="300" Width="530.252">
     <Grid Style="{StaticResource ContentRoot}">
@@ -25,15 +26,24 @@
                         <RowDefinition Height="190*"/>
                         <RowDefinition Height="41*"/>
                     </Grid.RowDefinitions>
-                    <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="211" Width="244" Grid.RowSpan="2"/>
                     <StackPanel Grid.Column="3" HorizontalAlignment="Left" Height="137" VerticalAlignment="Top" Width="123">
-                        <TextBox x:Name="textBox" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="5"/>
-                        <TextBox x:Name="textBox_Copy" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="5"/>
-                        <TextBox x:Name="textBox_Copy1" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="5"/>
-                        <TextBox x:Name="textBox_Copy2" Height="23" TextWrapping="Wrap" Text="TextBox" Margin="5"/>
+                        <TextBox x:Name="tbFirstname" Height="23" TextWrapping="Wrap" Margin="5"/>
+                        <TextBox x:Name="tbLastname" Height="23" TextWrapping="Wrap"  Margin="5"/>
+                        <TextBox x:Name="tbZipCode" Height="23" TextWrapping="Wrap" Margin="5"/>
+                        <TextBox x:Name="tbZipCode_Copy" Height="23" TextWrapping="Wrap" Margin="5"/>
                     </StackPanel>
-                    <Button x:Name="btnSaveCustomer" Content="Save" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="btnSaveCustomer" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="80" Content="" />
                     <Button x:Name="btnCancelSaveCustomer" Content="Cancel" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+                    <StackPanel Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="18,84,0,0" VerticalAlignment="Top" Width="100"/>
+                    <StackPanel Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="180" Margin="2,0,0,0" VerticalAlignment="Top" Width="105">
+                        <TextBlock x:Name="lbFirst" TextWrapping="Wrap" Text="First Name" Margin="10"/>
+                        <TextBlock x:Name="lbLast" TextWrapping="Wrap" Text="Last Name" Margin="5,15,15,15"/>
+                        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Address" Margin="5"/>
+                        <TextBlock x:Name="d" TextWrapping="Wrap" Text="Zipcode" Margin="5"/>
+
+
+
+                    </StackPanel>
                 </Grid>
             </StackPanel>
         </ScrollViewer>
