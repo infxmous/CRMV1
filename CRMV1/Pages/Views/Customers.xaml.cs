@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace CRMV1.Pages.Views
 {
     /// <summary>
-    /// Interaction logic for BasicPage1.xaml
+    /// Interaction logic for Customers.xaml
     /// </summary>
-    public partial class BasicPage1 : UserControl
+    public partial class Customers : UserControl
     {
-        public BasicPage1()
+        public Customers()
         {
             InitializeComponent();
-        }
-
-        private void btnSaveImage_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

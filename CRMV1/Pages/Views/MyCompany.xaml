@@ -5,9 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" Width="579.832">
     <Grid Style="{StaticResource ContentRoot}" Margin="16,28,16,10">
-        <ScrollViewer>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Margin="0,0,248,0">
             <StackPanel MinWidth="200">
                 <TextBlock Text="My Company" Style="{StaticResource Heading2}" />
                 <Grid Height="241" Width="262">
@@ -19,20 +23,25 @@
                         <RowDefinition Height="193*"/>
                         <RowDefinition Height="48*"/>
                     </Grid.RowDefinitions>
-                    <StackPanel HorizontalAlignment="Left" Height="193" Margin="6,0,0,0" VerticalAlignment="Top" Width="110"/>
-                    <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="146">
-                        <TextBox x:Name="textBox" Height="23" TextWrapping="Wrap" Text="TextBox"/>
-                        <TextBox x:Name="textBox_Copy" Height="23" TextWrapping="Wrap" Text="TextBox"/>
-                        <TextBox x:Name="textBox_Copy1" Height="23" TextWrapping="Wrap" Text="TextBox"/>
-                        <TextBox x:Name="textBox_Copy2" Height="23" TextWrapping="Wrap" Text="TextBox"/>
+                    <StackPanel HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="116">
+                        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Company Name" VerticalAlignment="Top" Margin="6,6,-14,6" FontSize="14" Width="118"/>
+                        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Adress" VerticalAlignment="Top" Margin="10,8,0,8" FontSize="14" Width="82" />
+                        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Telephone" VerticalAlignment="Top"  Margin="10,8,-28,8" FontSize="14" Width="128"/>
+                        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Website" VerticalAlignment="Top" Margin="10,8,0,8" FontSize="14" Width="100"/>
                     </StackPanel>
-                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"  Style="{StaticResource Heading2}"/>
-                    <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"  Style="{StaticResource Heading2}" Margin="0,21,0,0"/>
-                    <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"  Style="{StaticResource Heading2}" Margin="0,42,0,0"/>
-                    <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"  Style="{StaticResource Heading2}" Margin="0,63,0,0"/>
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="146">
+                        <TextBox x:Name="tbName" Height="23" TextWrapping="Wrap" Margin="5"/>
+                        <TextBox x:Name="tbAddress" Height="23" TextWrapping="Wrap" Margin="5"/>
+                        <TextBox x:Name="tbTelephone" Height="23" TextWrapping="Wrap"  Margin="5"/>
+                        <TextBox x:Name="tbWebsite" Height="23" TextWrapping="Wrap" Margin="5"/>
+                    </StackPanel>
+                    <Button x:Name="btnSave" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="31,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
 
                 </Grid>
             </StackPanel>
         </ScrollViewer>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="136" Margin="294,10,0,0" VerticalAlignment="Top" Width="218"/>
+        <Button x:Name="btnSaveImage" Content="Select Image" HorizontalAlignment="Left" Margin="294,151,0,0" VerticalAlignment="Top" Width="119" Click="btnSaveImage_Click" Height="25"/>
     </Grid>
 </UserControl>

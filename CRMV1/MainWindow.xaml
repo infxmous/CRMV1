@@ -17,6 +17,20 @@
                 <mui:Link DisplayName="My Company" Source="Pages/Views/MyCompany.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Invoices">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Invoices" Source="Pages/Views/MyCompany.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Customers">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Customers" Source="Pages/Views/Customers.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="software" Source="/Pages/SettingsPage.xaml" />
